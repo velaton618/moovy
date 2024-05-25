@@ -1,0 +1,49 @@
+.sidebar
+    background: var(--bg-light)
+
+    display: grid
+    grid-template-rows: 90vh 10vh
+
+    .tabs
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-top: 2rem
+        gap: 2rem
+
+    .logout
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .link
+        display: flex
+        justify-content: center
+        align-items: center
+
+        background: none
+        outline: none
+        border: none
+
+        width: 2.5rem
+        height: 2.5rem
+        border-radius: 0.5rem
+
+        color: var(--fg-dark)
+
+        transition: all 0.2s ease-in-out
+
+        .icon
+            stroke: var(--fg-dark)
+
+            transition: all 0.2s ease-in-out
+
+        &.active
+            background: var(--bg-light-2)
+
+            .icon
+                stroke: var(--fg)
+
+        &:hover
+            .icon
+                stroke: var(--fg-dark-2)
