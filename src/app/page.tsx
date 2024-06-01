@@ -574,10 +574,19 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <p className={s.specialTitle}>Special for you</p>
       <div className={s.special}>
-        <p className={s.title}>Special for you</p>
         <div className={s.movies}>
-          
+          {movies.map((movie) => (
+            <div className={s.movie} key={movie.id}>
+              <Image className={s.poster} alt="poster" src={movie.poster.url} width={10} height={10}/>
+              <div className={s.info}>
+                <p className={s.title}>{movie.name}</p>
+                <p className={s.year}>{movie.year}</p>
+                <p className={s.rating}>{movie.rating.kp}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
